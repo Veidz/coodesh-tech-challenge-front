@@ -68,7 +68,7 @@ function App() {
         </div>
 
         <div>
-            <h1 style={{ marginTop: '100px', fontSize: '24px' }}>Produtor</h1>
+            <h1 style={{ marginTop: '100px', fontSize: '24px' }}>Producer</h1>
             <div className='list-container-left'>
                 {
                     transactions.map((transaction: Transaction) => (
@@ -79,8 +79,8 @@ function App() {
                                 <h1>Id: {transaction.id}</h1>
                                 <p>Type: {transaction.type}</p>
                                 <p>Product: {transaction.product}</p>
-                                <p>Price: R${transaction.price}</p>
                                 <p>Seller: {transaction.seller}</p>
+                                <p>Price: R${transaction.price}</p>
                                 </div>
                             </div>
                         )
@@ -91,7 +91,7 @@ function App() {
         </div>
 
         <div>
-            <div><h1 style={{ marginTop: '100px', fontSize: '24px' }}>Afiliado</h1></div>
+            <div><h1 style={{ marginTop: '100px', fontSize: '24px' }}>Affiliated</h1></div>
             <div className='list-container-left'>
                 {
                     transactions.map((transaction: Transaction) => (
@@ -102,8 +102,8 @@ function App() {
                                 <h1>Id: {transaction.id}</h1>
                                 <p>Type: {transaction.type}</p>
                                 <p>Product: {transaction.product}</p>
-                                <p>Price: R${transaction.price}</p>
                                 <p>Seller: {transaction.seller}</p>
+                                <p>Price: R${transaction.price}</p>
                                 </div>
                             </div>
                         )
