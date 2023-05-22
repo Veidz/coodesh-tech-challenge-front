@@ -14,7 +14,7 @@ function App() {
     const formData = new FormData();
     formData.append("filesInput", file);
     api
-      .post("https://localhost:7192/Transaction", formData, {
+      .post("http://localhost:5254/Transaction", formData, {
         headers: { "Content-Type": "multipart/form-data"}
       })
       .then(() => setError(''))
