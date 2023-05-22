@@ -8,8 +8,6 @@ function App() {
   const [transactions, setTransactions] = useState([])
   const [totalProducer, setTotalProdutor] = useState(0)
   const [totalAffiliated, setTotalAffiliated] = useState(0)
-  const [totalPaidCommission, setTotalPaidCommission] = useState(0)
-  const [totalReceivedCommission, setTotalReceivedCommission] = useState(0)
 
   const handleFileUpload = async (event: any) => {
     const file = event.target.files[0];
@@ -41,8 +39,6 @@ function App() {
   useEffect(() => {
     let totalProdutorAux = 0
     let totalAfiliadoAux = 0
-    let totalPaidCommissionAux = 0
-    let totalReceivedCommissionAux = 0
 
     transactions.map((transaction: Transaction) => {
         if (transaction.type == 'Venda produtor') {
@@ -52,14 +48,6 @@ function App() {
         else if (transaction.type == 'Venda afiliado') {
             totalAfiliadoAux += transaction.price
             setTotalAffiliated(totalAfiliadoAux += transaction.price)
-        }
-        else if (transaction.type == 'Comissão paga') {
-            totalPaidCommissionAux += transaction.price
-            setTotalPaidCommission(totalPaidCommissionAux += transaction.price)
-        }
-        else if (transaction.type == 'Comissão recebida') {
-            totalReceivedCommissionAux += transaction.price
-            setTotalReceivedCommission(totalReceivedCommissionAux += transaction.price)
         }
     })
   }, [transactions])
@@ -100,8 +88,6 @@ function App() {
                 }
             </div>
             <div><h1 style={{ fontSize: '24px' }}>Total: R${totalProducer}</h1></div>
-            <div><h1 style={{ fontSize: '24px' }}>Paid Commission: R${totalPaidCommission}</h1></div>
-            <div><h1 style={{ fontSize: '24px' }}>Received Commission: R${totalReceivedCommission}</h1></div>
         </div>
 
         <div>
