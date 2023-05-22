@@ -24,14 +24,19 @@
     color: #c75b54;
 }
 
-.list-container {
+.list-container-left {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
+}
+
+.list-container-right {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .transaction {
-    display: grid;
     background-color: #202020;
     margin: 1em;
     padding: 1em;
