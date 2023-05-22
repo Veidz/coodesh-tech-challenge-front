@@ -1,19 +1,38 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #121212;
-    color: #fcfcfc;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    padding-top: 1em;
+    justify-content: center;
+    width: 100%;
+    background-color: #202020;
+    height: 80px;
+    position: absolute;
 }
 
 .form {
     background-color: #202020;
-    height: 400px;
-    width: 400px;
+    height: 0;
 }
 
 .error {
     color: #c75b54;
+}
+
+.list-container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.transaction {
+    display: grid;
+    background-color: #202020;
+    margin: 1em;
+    padding: 1em;
 }
